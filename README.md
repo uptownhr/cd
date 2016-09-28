@@ -3,12 +3,13 @@ Super simple Continous deployment server for people familiar with Docker.
 
 ## Setup
 0. I assume that you are using jwilder/nginx-proxy
-1. Clone and docker-compose up on your server
+1. Clone
 2. Update settings file with projects you want to setup
 3. Update docker-compose.yml
  - volumes to your project
  - volumes to your deployment ssh key
-3. hit /:project_name
+4. docker-compose up on your server
+5. hit http://virtual_host/:project_name
 
 ## Settings
 Using the settings.json file, you can define projects and their pathname, and command to run. When you hit the GET '/:project_name' path, the command will run from the directory set in the path.
