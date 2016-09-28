@@ -1,0 +1,10 @@
+app:
+  build: ./
+  command: npm run dev
+  environment:
+  - VIRTUAL_HOST=cd.docker
+  volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
+  - ./:/app
+  - /Users/uptown/Projects/staging.bambee:/Users/uptown/Projects/staging.bambee
+  - /Users/uptown/.ssh:/root/.ssh
