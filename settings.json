@@ -1,6 +1,9 @@
 {
   "staging.bambee": {
-    "path": "/Users/uptown/Projects/staging.project",
-    "command": "git fetch && git merge origin/master && docker-compose kill && docker-compose up -d"
+    "path": "/Users/uptown/Projects/Products/Bambee/staging.bambee",
+    "command": "git fetch && git merge origin/master && docker-compose kill && docker-compose up -d",
+    "payload": {
+      "new.name": "staging"
+    }
   }
 }
