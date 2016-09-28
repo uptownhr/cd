@@ -4,6 +4,10 @@ const express = require('express'),
 
 const app = express()
 const settings = require('../settings.json')
+
+
+
+
 console.log(os.tmpdir(), process.env.TMPDIR)
 app.listen(3000)
 
