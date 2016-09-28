@@ -26,7 +26,7 @@ app.get('/:name', (req,res) => {
   exec( setting.command, {
     cwd: setting.path
   }, (err, stdout, stderr) => {
-    console.log('command response:::', stdout, stderr)
+    console.log('command response:::', err, stdout, stderr)
   })
 })
 
