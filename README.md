@@ -40,3 +40,31 @@ app:
   - /Users/uptown/.ssh:/root/.ssh
 
 ```
+
+## Optional settings
+
+### Payload
+If you want your command to only execute given a certain condition against the payload. For example, checking against the branch name. In bitbucket's case, the branch name is sent as part of the payload
+
+```
+// bitbucket payload
+{
+  "new": {
+    "name": "staging"
+    ...
+  }
+  ...
+```
+
+In our settings file we can adjust the condition for when we can fire by adding in payload object.
+```
+{
+  "staging.project": {
+    "path": "/Users/uptown/Projects/staging.project",
+    "command": "git pull && docker-compose kill && docker-compose up -d",
+    "payload": {
+      "new.name": "staging"
+    }
+  }
+}
+```
